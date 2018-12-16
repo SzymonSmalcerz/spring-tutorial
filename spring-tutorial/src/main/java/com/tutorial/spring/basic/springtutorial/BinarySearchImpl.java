@@ -1,11 +1,15 @@
 package com.tutorial.spring.basic.springtutorial;
 
-import java.util.Arrays;
-
 public class BinarySearchImpl {
-		
+	
+	private Sortable sortable;
+	
+	public BinarySearchImpl(Sortable sortable) {
+		this.sortable = sortable;
+	}
+
 	public int binarySearch(int[] numbers, int numToFind) {
-		Arrays.sort(numbers);
+		numbers = this.sortable.sort(numbers);
 		int index = -1;
 		int low = 0;
 		int high = numbers.length;
