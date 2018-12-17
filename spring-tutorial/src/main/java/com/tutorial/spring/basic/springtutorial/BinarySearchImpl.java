@@ -1,9 +1,13 @@
 package com.tutorial.spring.basic.springtutorial;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class BinarySearchImpl {
 	
 	private Sortable sortable;
-	
+
 	public BinarySearchImpl(Sortable sortable) {
 		this.sortable = sortable;
 	}
